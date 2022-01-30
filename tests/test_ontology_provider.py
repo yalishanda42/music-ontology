@@ -39,7 +39,7 @@ class OntologyTests(unittest.TestCase):
         self.assertIn(limelight_lyrics, neil.lyrics_written)
 
         self.assertIn(moving_pictures, rush.discography)
-        self.assertEquals(rush, moving_pictures.artist)
+        self.assertEqual(rush, moving_pictures.artist)
 
 
 
