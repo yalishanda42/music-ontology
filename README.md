@@ -1,5 +1,7 @@
 # Music ontology
 
+[![Tests](https://github.com/allexks/music-ontology/actions/workflows/tests.yml/badge.svg)](https://github.com/allexks/music-ontology/actions/workflows/tests.yml)
+
 ## Creating the ontology
 
 To create the ontology file from source (when not present), one should run
