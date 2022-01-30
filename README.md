@@ -27,3 +27,5 @@ Running all the tests can be done by
 ```bash
 make test
 ```
+
+This command also makes sure that the `ontology.owl` file is present in the root project directory before running the tests (by `make`-ing the `ontology.owl` target). If the ontology file is not up to date, you can fix this by running `make ontology` before executing the tests.
