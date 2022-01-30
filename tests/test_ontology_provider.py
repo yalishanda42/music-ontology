@@ -23,8 +23,9 @@ class OntologyTests(unittest.TestCase):
         yyz = onto["YYZ"]
         moving_pictures = onto["Moving Pictures"]
 
-        self.assertEqual(yyz.album, moving_pictures)
-        self.assertTrue(yyz in moving_pictures.tracks)
+        self.assertIn(yyz, moving_pictures.tracks)
+        self.assertIn(moving_pictures, yyz.albums)
+
 
 
 if __name__ == "__main__":
