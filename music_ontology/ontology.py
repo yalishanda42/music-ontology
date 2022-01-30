@@ -124,7 +124,7 @@ class MusicOntologyProvider:
             alex = Artist("Alex Lifeson")
             neil = Artist("Neil Peart")
 
-            rush = Trio("Rush", members=[
+            rush = Artist("Rush", members=[
                 geddy,
                 alex,
                 neil,
