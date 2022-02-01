@@ -219,6 +219,10 @@ class MusicOntologyProvider:
                 ]
             )
 
+            # Disjoints
+
+            owl.AllDisjoint([EP, Single, Compilation])
+
         return onto
 
     def load(self) -> owl.Ontology:
