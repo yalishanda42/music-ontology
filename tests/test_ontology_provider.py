@@ -41,6 +41,15 @@ class OntologyTests(unittest.TestCase):
         self.assertIn(moving_pictures, rush.discography)
         self.assertEqual(rush, moving_pictures.artist)
 
+    def test_indirect_parents(self):
+        """Test that the indirect inheritance relationships are correct."""
+
+        provider = MusicOntologyProvider()
+        onto = provider.load()
+
+        rush = onto.Rush
+
+        self.assertIn(onto.Artist, rush.INDIRECT_is_a)
 
 
 if __name__ == "__main__":
