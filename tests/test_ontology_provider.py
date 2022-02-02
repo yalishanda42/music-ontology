@@ -51,6 +51,19 @@ class OntologyTests(unittest.TestCase):
 
         self.assertIn(onto.Artist, rush.INDIRECT_is_a)
 
+    def test_indirect_subclasses(self):
+        """Test that the indirect subclass relationships are correct."""
+
+        provider = MusicOntologyProvider()
+        onto = provider.load()
+
+        with onto:
+            class InstrumentalBand(onto.MusicalEnsemble):
+                equivalent_to = [onto.MusicalEnsemble & onto.has_album_in_discography.only(
+                    onto.InstrumentalAlbum)]
+
+        self.assertIn(onto.Artist, InstrumentalBand.INDIRECT_is_a)
+
 
 if __name__ == "__main__":
     unittest.main()
