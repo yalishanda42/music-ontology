@@ -221,6 +221,92 @@ class MusicOntologyProvider:
                 ]
             )
 
+            song2112 = Track(
+                "2112",
+                artists=[rush],
+                length_in_milliseconds=1234000,
+                genres=[prog_rock, hard_rock, rock],
+                lyrics=Lyrics(
+                    "'2112' Lyrics",
+                    text="And the Meek shall inherit the Earth...",
+                    written_by=[neil]
+                )
+            )
+
+            bangkok = Track(
+                "A Passage to Bangkok",
+                artists=[rush],
+                length_in_milliseconds=212000,
+                genres=[prog_rock, hard_rock, rock],
+                lyrics=Lyrics(
+                    "'A Passage to Bangkok' Lyrics",
+                    text="Our first stop is in Bogota\nTo check Colombian fields",
+                    written_by=[neil]
+                )
+            )
+
+            twilight_zone = Track(
+                "The Twilight Zone",
+                artists=[rush],
+                length_in_milliseconds=196000,
+                genres=[prog_rock, hard_rock, rock],
+                lyrics=Lyrics(
+                    "'The Twilight Zone' Lyrics",
+                    text="A pleasant faced man steps up to greet you\nHe smiles and says he's pleased to meet you",
+                    written_by=[neil]
+                )
+            )
+
+            lessons = Track(
+                "Lessons",
+                artists=[rush],
+                length_in_milliseconds=231000,
+                genres=[prog_rock, hard_rock, rock],
+                lyrics=Lyrics(
+                    "'Lessons' Lyrics",
+                    text="Sweet memories flashing very quickly by\nReminding me and giving me a reason why",
+                    written_by=[alex]
+                )
+            )
+
+            tears = Track(
+                "Tears",
+                artists=[rush],
+                length_in_milliseconds=210000,
+                genres=[prog_rock, hard_rock, rock],
+                lyrics=Lyrics(
+                    "'Tears' Lyrics",
+                    text="All of the seaons\nAnd all of the days\nAll of the reasons\nWhy I've felt this way",
+                    written_by=[geddy]
+                )
+            )
+
+            something_for_nothing = Track(
+                "Something For Nothing",
+                artists=[rush],
+                length_in_milliseconds=239000,
+                genres=[prog_rock, hard_rock, rock],
+                lyrics=Lyrics(
+                    "'Something For Nothing' Lyrics",
+                    text="Waiting for the winds of change\nTo sweep the clouds away",
+                    written_by=[neil]
+                )
+            )
+
+            album2112 = Album(
+                "2112",
+                artist=rush,
+                year=1976,
+                tracks=[
+                    song2112,
+                    bangkok,
+                    twilight_zone,
+                    lessons,
+                    tears,
+                    something_for_nothing,
+                ]
+            )
+
             # Disjoints
 
             owl.AllDisjoint([EP, Single, Compilation])
