@@ -20,6 +20,8 @@ class MusicOntologyProvider:
 
             class Artist(owl.Thing): pass
 
+            class SoloArtist(Artist): pass
+
             class MusicalEnsemble(Artist): pass
 
             class Album(owl.Thing): pass
@@ -62,10 +64,10 @@ class MusicOntologyProvider:
                 inverse_property = has_album_artist
                 python_name = "discography"
 
-            class has_group_member(MusicalEnsemble >> Artist):
+            class has_group_member(MusicalEnsemble >> SoloArtist):
                 python_name = "members"
 
-            class is_member_of_group(Artist >> MusicalEnsemble):
+            class is_member_of_group(SoloArtist >> MusicalEnsemble):
                 inverse_property = has_group_member
                 python_name = "groups"
 
@@ -120,9 +122,9 @@ class MusicOntologyProvider:
             hard_rock = Genre("Hard Rock")
             prog_rock = Genre("Progressive Rock")
 
-            geddy = Artist("Geddy Lee")
-            alex = Artist("Alex Lifeson")
-            neil = Artist("Neil Peart")
+            geddy = SoloArtist("Geddy Lee")
+            alex = SoloArtist("Alex Lifeson")
+            neil = SoloArtist("Neil Peart")
 
             rush = MusicalEnsemble("Rush", members=[
                 geddy,
@@ -138,7 +140,7 @@ class MusicOntologyProvider:
                 lyrics=Lyrics(
                     "'Tom Sawyer' Lyrics",
                     text="A modern day warrior\nMean mean stride\nToday's Tom Sawyer\nMean mean pride",
-                    written_by=[neil, Artist("Pye Dubois")]
+                    written_by=[neil, SoloArtist("Pye Dubois")]
                 )
             )
             red_barchetta = Track(
@@ -183,7 +185,7 @@ class MusicOntologyProvider:
             )
             witch_hunt = Track(
                 "Witch Hunt",
-                artists=[rush, Artist("Hugh Syme")],
+                artists=[rush, SoloArtist("Hugh Syme")],
                 length_in_milliseconds=285000,
                 genres=[prog_rock, hard_rock, rock],
                 lyrics=Lyrics(
@@ -222,6 +224,7 @@ class MusicOntologyProvider:
             # Disjoints
 
             owl.AllDisjoint([EP, Single, Compilation])
+            owl.AllDisjoint([SoloArtist, MusicalEnsemble])
 
         return onto
 
