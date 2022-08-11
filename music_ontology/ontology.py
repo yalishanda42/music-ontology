@@ -312,6 +312,19 @@ class MusicOntologyProvider:
             owl.AllDisjoint([EP, Single, Compilation])
             owl.AllDisjoint([SoloArtist, MusicalEnsemble])
 
+            # Distinct individuals
+
+            owl.AllDifferent(Artist.instances())
+            owl.AllDifferent(SoloArtist.instances())
+            owl.AllDifferent(MusicalEnsemble.instances())
+            owl.AllDifferent(Album.instances())
+            owl.AllDifferent(EP.instances())
+            owl.AllDifferent(Single.instances())
+            owl.AllDifferent(Compilation.instances())
+            owl.AllDifferent(Track.instances())
+            owl.AllDifferent(Lyrics.instances())
+            owl.AllDifferent(Genre.instances())
+
         return onto
 
     def load(self) -> owl.Ontology:
