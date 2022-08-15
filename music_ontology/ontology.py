@@ -122,9 +122,9 @@ class MusicOntologyProvider:
             hard_rock = Genre("Hard Rock")
             prog_rock = Genre("Progressive Rock")
 
-            geddy = SoloArtist("Geddy Lee")
-            alex = SoloArtist("Alex Lifeson")
-            neil = SoloArtist("Neil Peart")
+            geddy = Artist("Geddy Lee")
+            alex = Artist("Alex Lifeson")
+            neil = Artist("Neil Peart")
 
             rush = MusicalEnsemble("Rush", members=[
                 geddy,
@@ -310,11 +310,11 @@ class MusicOntologyProvider:
             metal = Genre("Metal")
             prog_metal = Genre("Progressive Metal")
 
-            portnoy = SoloArtist("Mike Portnoy")
-            petrucci = SoloArtist("John Petrucci")
-            myung = SoloArtist("John Myung")
-            rudess = SoloArtist("Jordan Rudess")
-            labrie = SoloArtist("James LaBrie")
+            portnoy = Artist("Mike Portnoy")
+            petrucci = Artist("John Petrucci")
+            myung = Artist("John Myung")
+            rudess = Artist("Jordan Rudess")
+            labrie = Artist("James LaBrie")
 
             dream_theater = MusicalEnsemble("Dream Theater", members=[
                 portnoy, petrucci, myung, rudess, labrie
@@ -416,7 +416,7 @@ class MusicOntologyProvider:
 
             instrumental_rock = Genre("Instrumental Rock")
 
-            levin = SoloArtist("Tony Levin")
+            levin = Artist("Tony Levin")
 
             lte = MusicalEnsemble("Liquid Tension Experiment", members=[
                 portnoy, petrucci, levin, rudess
