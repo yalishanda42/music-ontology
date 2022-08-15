@@ -307,6 +307,113 @@ class MusicOntologyProvider:
                 ]
             )
 
+            metal = Genre("Metal")
+            prog_metal = Genre("Progressive Metal")
+
+            portnoy = SoloArtist("Mike Portnoy")
+            petrucci = SoloArtist("John Petrucci")
+            myung = SoloArtist("John Myung")
+            rudess = SoloArtist("Jordan Rudess")
+            labrie = SoloArtist("James LaBrie")
+
+            dream_theater = MusicalEnsemble("Dream Theater", members=[
+                portnoy, petrucci, myung, rudess, labrie
+            ])
+
+            as_i_am = Track(
+                "As I Am",
+                artists=[dream_theater],
+                length_in_milliseconds=467000,
+                genres=[prog_metal, metal],
+                lyrics=Lyrics(
+                    "'As I Am' Lyrics",
+                    text="Don't tell me what's in\nTell me how to write",
+                    written_by=[petrucci]
+                )
+            )
+
+            this_dying_soul = Track(
+                "This Dying Soul",
+                artists=[dream_theater],
+                length_in_milliseconds=687000,
+                genres=[prog_metal, metal],
+                lyrics=Lyrics(
+                    "'This Dying Soul' Lyrics",
+                    text="Hello mirror\nSo glad to see you my friend, it's been a while",
+                    written_by=[portnoy]
+                )
+            )
+
+            endless_sacrifice = Track(
+                "Endless Sacrifice",
+                artists=[dream_theater],
+                length_in_milliseconds=684000,
+                genres=[prog_metal, metal],
+                lyrics=Lyrics(
+                    "'Endless Sacrifice' Lyrics",
+                    text="Cold, lying in my bed\nStaring into darkness",
+                    written_by=[petrucci]
+                )
+            )
+
+            honor_thy_father = Track(
+                "Honor Thy Father",
+                artists=[dream_theater],
+                length_in_milliseconds=614000,
+                genres=[prog_metal, metal],
+                lyrics=Lyrics(
+                    "'Honor Thy Father' Lyrics",
+                    text="We're taught unconditional love\nThe blood is thicker than water",
+                    written_by=[portnoy]
+                )
+            )
+
+            vacant = Track(
+                "Vacant",
+                artists=[dream_theater],
+                length_in_milliseconds=117000,
+                genres=[prog_metal, metal],
+                lyrics=Lyrics(
+                    "'Vacant' Lyrics",
+                    text="Hey you, hey you\nI'm right here",
+                    written_by=[labrie]
+                )
+            )
+
+            stream_of_consciousness = Track(
+                "Stream of Consciousness",
+                artists=[dream_theater],
+                length_in_milliseconds=676000,
+                genres=[prog_metal, metal]
+            )
+
+            in_the_name_of_god = Track(
+                "In the Name of God",
+                artists=[dream_theater],
+                length_in_milliseconds=856000,
+                genres=[prog_metal, metal],
+                lyrics=Lyrics(
+                    "'In the Name of God' Lyrics",
+                    text="How can this be?\nWhy is he the chosen one?",
+                    written_by=[petrucci]
+                )
+            )
+
+            train_of_thought = Album(
+                "Train of Thought",
+                artist=dream_theater,
+                year=2003,
+                tracks=[
+                    as_i_am,
+                    this_dying_soul,
+                    endless_sacrifice,
+                    honor_thy_father,
+                    vacant,
+                    stream_of_consciousness,
+                    in_the_name_of_god,
+                ]
+            )
+
             # Disjoints
 
             owl.AllDisjoint([EP, Single, Compilation])
