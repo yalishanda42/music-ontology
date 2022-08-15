@@ -414,6 +414,94 @@ class MusicOntologyProvider:
                 ]
             )
 
+            instrumental_rock = Genre("Instrumental Rock")
+
+            levin = SoloArtist("Tony Levin")
+
+            lte = MusicalEnsemble("Liquid Tension Experiment", members=[
+                portnoy, petrucci, levin, rudess
+            ])
+
+            paradigm_shift = Track(
+                "Paradigm Shift",
+                artists=[lte],
+                length_in_milliseconds=535000,
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            osmosis = Track(
+                "Osmosis",
+                artists=[lte],
+                length_in_milliseconds=206000,
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            kindred_spirits = Track(
+                "Kindred Spirits",
+                artists=[lte],
+                length_in_milliseconds=389000,
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            the_stretch = Track(
+                "The Stretch",
+                artists=[lte],
+                length_in_milliseconds=120000,
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            freedom_of_speech = Track(
+                "Freedom of Speech",
+                artists=[lte],
+                length_in_milliseconds=559000,
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            chris_and_kevins_excellent_adventure = Track(
+                "Chris and Kevin's Excellent Adventure",
+                artists=[lte],
+                length_in_milliseconds=141000,
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            state_of_grace = Track(
+                "State of Grace",
+                artists=[lte],
+                length_in_milliseconds=856000,
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            universal_mind = Track(
+                "Universal Mind",
+                artists=[lte],
+                length_in_milliseconds=301000,
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            three_minute_warning = Track(
+                "Three Minute Warning",
+                artists=[lte],
+                length_in_milliseconds=1716000,  # a long long boii
+                genres=[instrumental_rock, prog_metal]
+            )
+
+            liquid_tension_experiment_album = Album(
+                "Liquid Tension Experiment",
+                artist=lte,
+                year=1999,
+                tracks=[
+                    paradigm_shift,
+                    osmosis,
+                    kindred_spirits,
+                    the_stretch,
+                    freedom_of_speech,
+                    chris_and_kevins_excellent_adventure,
+                    state_of_grace,
+                    universal_mind,
+                    three_minute_warning,
+                ]
+            )
+
             # Disjoints
 
             owl.AllDisjoint([EP, Single, Compilation])
