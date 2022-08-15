@@ -486,7 +486,7 @@ class MusicOntologyProvider:
             )
 
             liquid_tension_experiment_album = Album(
-                "Liquid Tension Experiment",
+                "Liquid Tension Experiment I",
                 artist=lte,
                 year=1999,
                 tracks=[
