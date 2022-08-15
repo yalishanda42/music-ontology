@@ -222,7 +222,7 @@ class MusicOntologyProvider:
             )
 
             song2112 = Track(
-                "2112",
+                "2112 (Song)",
                 artists=[rush],
                 length_in_milliseconds=1234000,
                 genres=[prog_rock, hard_rock, rock],
@@ -294,7 +294,7 @@ class MusicOntologyProvider:
             )
 
             album2112 = Album(
-                "2112",
+                "2112 (Album)",
                 artist=rush,
                 year=1976,
                 tracks=[
